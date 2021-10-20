@@ -24,7 +24,9 @@ namespace ReadFile001
             FileDemo.ReadAndParseString(marvel_heroesFile);
 
 
+            char[] characters = FileDemo.SplitAString("supercalifragilisticexpialidocious");
 
+            Console.WriteLine($"The character at index position 10, live position 11 is {characters[10]}");
 
 
 

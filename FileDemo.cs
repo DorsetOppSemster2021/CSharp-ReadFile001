@@ -79,7 +79,7 @@ namespace ReadFile001
             catch (Exception e)
             {
                 Console.WriteLine("The file could not be read:");
-                Console.WriteLine(e.Message)
+                Console.WriteLine(e.Message);
             }
         }
         public static void WriteDemo(string file, string[] heroes)
@@ -102,6 +102,24 @@ namespace ReadFile001
             }
          //   Console.WriteLine("Done");
             //Console.ReadKey();
+
+        }
+
+        public static char[] SplitAString(string stringToSplit)
+        {
+
+
+
+            char[] characters =  stringToSplit.ToCharArray();
+
+            foreach(char c in characters)
+            {
+
+                Console.WriteLine($"'{c}'");
+            }
+
+            return characters;
+
 
         }
     
