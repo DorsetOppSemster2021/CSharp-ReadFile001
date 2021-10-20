@@ -45,9 +45,9 @@ namespace ReadFile001
         }
   
     
-        public static void WriteDemo(string file)
+        public static void WriteDemo(string file, string[] heroes)
         {
-            string[] heroes = { "Batman", "Superman", "The Hulk" };
+          
 
             string path = "c:/users/outsi/downloads";
             //string file = "heroes.txt";

@@ -10,11 +10,21 @@ namespace ReadFile001
 
             //FileDemo.ReadDemo("jamaica.txt");
 
-            string heroesFile = "heroes.txt";
-         
-            FileDemo.WriteDemo(heroesFile);
+            string dc_heroesFile = "heroes-dc.txt";
+            string[] dc_heroes = { "Batman", "Superman", "Aquaman" };
+            FileDemo.WriteDemo(dc_heroesFile, dc_heroes);
+            FileDemo.ReadDemo(dc_heroesFile);
 
-            FileDemo.ReadDemo(heroesFile);
+
+            string marvel_heroesFile = "heroes-marvel.txt";
+            string[] marvel_heroes = { "SpiderMan", "The Hulk", "Thanos" };
+            FileDemo.WriteDemo(marvel_heroesFile, marvel_heroes);
+            FileDemo.ReadDemo(marvel_heroesFile);
+
+
+
+
+
 
         }
     }
