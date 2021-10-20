@@ -43,8 +43,45 @@ namespace ReadFile001
             }
 
         }
-  
-    
+
+        // Formatting string example
+        // https://stackoverflow.com/questions/644017/net-format-a-string-with-fixed-spaces
+        //string s = "String goes here";
+        //string lineAlignedRight = String.Format("{0,27}", s);
+        //string lineAlignedCenter = String.Format("{0,-27}",
+        //    String.Format("{0," + ((27 + s.Length) / 2).ToString() + "}", s));
+        //string lineAlignedLeft = String.Format("{0,-27}", s);
+
+
+
+
+        public static void ReadAndParseString(string file)
+        {
+            string path = "c:/users/outsi/downloads";
+            //string file = "jamaica.txt";
+            string fileToRead = $"{path}/{file}";
+
+            //Console.WriteLine($"Reading {fileToRead}");
+            try
+            {
+                using (StreamReader sr = new StreamReader(fileToRead))
+                {
+
+                    string line;
+                    while ((line = sr.ReadLine()) is not null)
+                    {
+
+                        string[] splitData = line.Split(":");
+                        Console.WriteLine($"\t{String.Format("{0,-20}", splitData[0])}\t{splitData[1]}");
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("The file could not be read:");
+                Console.WriteLine(e.Message)
+            }
+        }
         public static void WriteDemo(string file, string[] heroes)
         {
           
@@ -63,7 +100,7 @@ namespace ReadFile001
                 }
 
             }
-            Console.WriteLine("Done");
+         //   Console.WriteLine("Done");
             //Console.ReadKey();
 
         }

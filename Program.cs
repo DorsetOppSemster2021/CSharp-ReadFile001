@@ -11,15 +11,17 @@ namespace ReadFile001
             //FileDemo.ReadDemo("jamaica.txt");
 
             string dc_heroesFile = "heroes-dc.txt";
-            string[] dc_heroes = { "Batman", "Superman", "Aquaman" };
+            string[] dc_heroes = { "Batman:Bruce Wayne", "Superman:Clarke Kent", "Aquaman:Arthur Curry" };
             FileDemo.WriteDemo(dc_heroesFile, dc_heroes);
-            FileDemo.ReadDemo(dc_heroesFile);
+            FileDemo.ReadAndParseString(dc_heroesFile);
 
+            // https://docs.microsoft.com/en-us/dotnet/standard/base-types/padding
+            Console.WriteLine("=".PadRight(80,'='));
 
             string marvel_heroesFile = "heroes-marvel.txt";
-            string[] marvel_heroes = { "SpiderMan", "The Hulk", "Thanos" };
+            string[] marvel_heroes = { "SpiderMan:Peter Parker", "The Hulk:David Banner", "Captain America:Steve Rogers" };
             FileDemo.WriteDemo(marvel_heroesFile, marvel_heroes);
-            FileDemo.ReadDemo(marvel_heroesFile);
+            FileDemo.ReadAndParseString(marvel_heroesFile);
 
 
 
