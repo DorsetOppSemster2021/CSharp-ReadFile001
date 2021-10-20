@@ -15,15 +15,16 @@ namespace ReadFile001
             FileDemo.WriteDemo(dc_heroesFile, dc_heroes);
             FileDemo.ReadAndParseString(dc_heroesFile);
 
-            // https://docs.microsoft.com/en-us/dotnet/standard/base-types/padding
-            Console.WriteLine("=".PadRight(80,'='));
-
+            
+            FileDemo.OutputSeparator();
+           
             string marvel_heroesFile = "heroes-marvel.txt";
             string[] marvel_heroes = { "SpiderMan:Peter Parker", "The Hulk:David Banner", "Captain America:Steve Rogers" };
             FileDemo.WriteDemo(marvel_heroesFile, marvel_heroes);
             FileDemo.ReadAndParseString(marvel_heroesFile);
 
 
+            FileDemo.OutputSeparator();
             char[] characters = FileDemo.SplitAString("supercalifragilisticexpialidocious");
 
             Console.WriteLine($"The character at index position 10, live position 11 is {characters[10]}");

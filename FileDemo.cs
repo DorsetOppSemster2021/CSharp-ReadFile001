@@ -108,20 +108,24 @@ namespace ReadFile001
         public static char[] SplitAString(string stringToSplit)
         {
 
-
-
             char[] characters =  stringToSplit.ToCharArray();
 
             foreach(char c in characters)
             {
 
-                Console.WriteLine($"'{c}'");
+                Console.Write($"'{c}',");
             }
+            Console.WriteLine("");
 
             return characters;
 
-
         }
-    
+
+        // https://docs.microsoft.com/en-us/dotnet/standard/base-types/padding
+        public static void OutputSeparator()
+        {
+            Console.WriteLine("=".PadRight(80, '='));
+        }
+
     }
 }
